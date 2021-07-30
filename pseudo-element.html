@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Element</title>
+
+    <style>
+        h1::before {
+            content: "Hello ";
+            color: greenyellow;
+        }
+
+        h1::after {
+            content: " gelo";
+            color: green;
+        }
+
+        blockquote::before {
+            content: open-quote;
+            color: rgb(179, 26, 26);
+            font-size: 1.5rem;
+        }
+
+        blockquote::after {
+            content: close-quote;
+            color: rgb(179, 26, 26);
+            font-size: 1.5rem;
+        }
+
+        .section-title {
+            display: inline-block;
+            position: relative;
+        }
+
+        .section-title::after {
+            position: absolute;
+            content: "";
+            display: block;
+            background-color: magenta;
+            height: 2px;
+            width: 50%;
+            margin-left: auto;
+            left: calc(50% - 25%);
+        }
+
+        .add-star::after {
+            content: "*";
+            color: red;
+            font-size: .8rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Having fun with the Pseudo pseduo vai bon</h1>
+    <h1>Having fun with the Pseudo pseduo vai bon</h1>
+
+    <section>
+        <h2 class="section-title">Best Quotes</h2>
+        <blockquote>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus nam dolor nobis non, illo minima
+            nihil dicta. Optio, obcaecati sunt!</blockquote>
+
+        <blockquote>The country's greatest resource is the dedication of its workers.</blockquote>
+
+        <form action="">
+            <label class="add-star" for="">Enter your name: </label> <br>
+            <input type="text">
+        </form>
+    </section>
+</body>
+
+</html>
